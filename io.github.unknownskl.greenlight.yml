@@ -37,9 +37,9 @@ modules:
       - yarn --offline
       - yarn run desktop flatpak-build --offline -- --linux
       # Add icon, metadata and desktop file
-      - install -Dm 644 flatpak/io.github.unknownskl.greenlight.png ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png
-      - install -Dm 644 flatpak/io.github.unknownskl.greenlight.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
-      - install -Dm 644 flatpak/io.github.unknownskl.greenlight.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.appdata.xml
+      - install -Dm 644 packages/desktop/flatpak/io.github.unknownskl.greenlight.png ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png
+      - install -Dm 644 packages/desktop/flatpak/io.github.unknownskl.greenlight.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
+      - install -Dm 644 packages/desktop/flatpak/io.github.unknownskl.greenlight.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.appdata.xml
       # Bundle app and dependencies
       - cp -a dist/linux*unpacked /app/main
       # Install app wrapper
