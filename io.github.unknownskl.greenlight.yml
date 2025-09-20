@@ -41,7 +41,7 @@ modules:
       - install -Dm 644 packages/desktop/flatpak/io.github.unknownskl.greenlight.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
       - install -Dm 644 packages/desktop/flatpak/io.github.unknownskl.greenlight.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.appdata.xml
       # Bundle app and dependencies
-      - cp -a dist/linux*unpacked /app/main
+      - cp -a packages/desktop/dist/linux*unpacked /app/main
       # Install app wrapper
       - install -Dm755 -t /app/bin/ ../run.sh
     subdir: main
