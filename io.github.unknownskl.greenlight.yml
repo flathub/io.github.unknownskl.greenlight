@@ -48,8 +48,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/unknownskl/greenlight
-        tag: v2.3.3
-        commit: fe8d97a8b8c3b18582791a328aee0e0e3a6060e0
+        tag: v2.4.0
+        commit: f012935f21a7e25f73c285e8af5af717788dd820
         dest: main
       - type: git
         url: https://github.com/Originalimoc/amd-patched-mesa
@@ -71,4 +71,4 @@ modules:
           - export LD_LIBRARY_PATH=/app/extralib:${LD_LIBRARY_PATH}
           - echo runtime LD_LIBRARY_PATH = $LD_LIBRARY_PATH
           - echo runtime ARCH = $(uname -m)-$(uname -s | tr '[:upper:]' '[:lower:]')
-          - zypak-wrapper.sh /app/main/greenlight-dektop "$@"
+          - zypak-wrapper.sh /app/main/greenlight-desktop "$@"
